@@ -54,6 +54,7 @@ trait PayPalPlansApi{
     protected $host;
     protected $header;
 
+
     public function __construct()
     {
     //here you have to past yor paypal account key id
@@ -65,6 +66,7 @@ trait PayPalPlansApi{
             'Authorization' => 'Basic '.$this->key,
         ];
     }
+
 
 
     public function paypalSubscription($plan_id,$user_id)
@@ -102,6 +104,8 @@ trait PayPalPlansApi{
 
 
         }
+
+
          public function payment_success(Request $request){
 
         $uri = 'https://api.sandbox.paypal.com/v1/billing/subscriptions/'.$request->subscription_id;
@@ -148,14 +152,12 @@ trait PayPalPlansApi{
 
 
     }
+
     public function payment_error(){
         return 'payment not done! Error';
     }
 
 }
-
-
-
 
 
 step 7:
