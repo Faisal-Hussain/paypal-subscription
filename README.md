@@ -36,7 +36,9 @@ Past this code in subscription_migration
     PAYPAL_PLAN_ID=P-9Y0017_abcabcabcabcabcabc---this is for demo
     
     step 6:
-    this is a trait and past it in app/trait  
+    this is a trait and past it in app/trait 
+    
+    
 <?php
 
 namespace App\Traits;
@@ -100,7 +102,7 @@ trait PayPalPlansApi{
 
 
         }
- public function payment_success(Request $request){
+         public function payment_success(Request $request){
 
         $uri = 'https://api.sandbox.paypal.com/v1/billing/subscriptions/'.$request->subscription_id;
 
