@@ -159,7 +159,6 @@ trait PayPalPlansApi{
 
 }
 
-
 step 7:
 use these method where you want in controller ( when click on pay with paypal and request come in controller method call this function)
 
