@@ -36,10 +36,8 @@ Past this code in subscription_migration
     PAYPAL_PLAN_ID=P-9Y0017_abcabcabcabcabcabc---this is for demo
     
     step 6:
-    this is a trait and past it in app/trait
-    
-    
-    <?php
+    this is a trait and past it in app/trait  
+<?php
 
 namespace App\Traits;
 use GuzzleHttp\Exception\GuzzleException;
@@ -102,9 +100,6 @@ trait PayPalPlansApi{
 
 
         }
-
-
-
  public function payment_success(Request $request){
 
         $uri = 'https://api.sandbox.paypal.com/v1/billing/subscriptions/'.$request->subscription_id;
@@ -155,8 +150,6 @@ trait PayPalPlansApi{
         return 'payment not done! Error';
     }
 
-
-
 }
 
 
@@ -185,5 +178,5 @@ use these method where you want in controller ( when click on pay with paypal an
     route when you get subscription what is the route you want to hit 
     
     Route::get('/paymentsuccess/{id}',[ProfileController::class,'payment_success']);
-Route::get('/paymenterror',[ProfileController::class,'payment_error']);
+    Route::get('/paymenterror',[ProfileController::class,'payment_error']);
     
